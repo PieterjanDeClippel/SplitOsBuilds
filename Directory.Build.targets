@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup Condition="'$(IsTestProject)' != 'true'">
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+  <!--Exclude other bin/obj folders from build-->
+  <ItemGroup>
+    <Compile Remove="$(MSBuildProjectDirectory)\tmp-build\**" />
+    <Content Remove="$(MSBuildProjectDirectory)\tmp-build\**" />
+    <EmbeddedResource Remove="$(MSBuildProjectDirectory)\tmp-build\**" />
+    <None Remove="$(MSBuildProjectDirectory)\tmp-build\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="**\*.*.cs">
+      <DependentUpon>$([System.Text.RegularExpressions.Regex]::Replace('%(Filename)', '(?:.(?![.]))+$', '%(Extension)'))</DependentUpon>
+    </Compile>
+    <Content Update="**\*.*.json">
+      <DependentUpon>$([System.Text.RegularExpressions.Regex]::Replace('%(Filename)', '(?:.(?![.]))+$', '%(Extension)'))</DependentUpon>
+    </Content>
+  </ItemGroup>
+</Project>

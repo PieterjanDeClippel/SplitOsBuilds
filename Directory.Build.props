@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <CommonTargetFramework>net9.0</CommonTargetFramework>
+    <CommonLangVersion>13</CommonLangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS.StartsWith(`Windows`))' == 'true' ">
+    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\tmp-build\obj-windows\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildProjectDirectory)\tmp-build\bin-windows\</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS.StartsWith(`Windows`))' != 'true' ">
+    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)/tmp-build/obj-linux/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildProjectDirectory)/tmp-build/bin-linux/</BaseOutputPath>
+  </PropertyGroup>
+</Project>
