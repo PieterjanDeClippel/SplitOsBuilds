@@ -4,7 +4,7 @@
     <CommonLangVersion>13</CommonLangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\tmp-build\obj-$(OS)\</BaseIntermediateOutputPath>
-    <BaseOutputPath>$(MSBuildProjectDirectory)\tmp-build\bin-$(OS)\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\tmp-build\obj-$(MSBuildOS)\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildProjectDirectory)\tmp-build\bin-$(MSBuildOS)\</BaseOutputPath>
   </PropertyGroup>
 </Project>
