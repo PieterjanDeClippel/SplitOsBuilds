@@ -12,4 +12,7 @@ If you still see any `bin` or `obj` folders in your projects, do the following:
 - Reopen the solution in Visual Studio
 - Reopen the folder in VS Code and start the DevContainer
 
-The build files should now show up under a `tmp-build` folder, as shown in the image above
+The build files should now show up under a `tmp-build` folder, as shown in the image above.
+Because of that the files no longer produce conflicting, non-existing paths
+
+<img width="3149" height="894" alt="afbeelding" src="https://github.com/user-attachments/assets/c4591292-5f99-4a23-b7e1-743a8b78dbd3" />
