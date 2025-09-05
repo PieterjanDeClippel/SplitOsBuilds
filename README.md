@@ -1,4 +1,5 @@
 # Split OS Builds in Visual Studio
+## About
 
 With this setup, you can open your solution in Visual Studio for Windows and a Linux/Debian DevContainer side-by-side.
 The temporary files are split out and don't interfere with each other
@@ -11,6 +12,8 @@ If you still see any `bin` or `obj` folders in your projects, do the following:
 - Remove your existing DevContainer and corresponding docker-image through Docker Desktop
 - Reopen the solution in Visual Studio
 - Reopen the folder in VS Code and start the DevContainer
+
+## Result
 
 The build files should now show up under a `tmp-build` folder, as shown in the image above.
 Because of that the files no longer produce conflicting, non-existing paths
